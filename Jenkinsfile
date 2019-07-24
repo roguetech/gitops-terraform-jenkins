@@ -6,7 +6,7 @@ try {
     node {
       cleanWs()
       checkout scm
-      def tfHome = tool name: 'Terraform', type: 'com.cloudbees.jenkins.plugins.customtools.CustomTool'
+      def tfHome = "/usr/local/bin/terraform"
       env.PATH = "${tfHome}:${env.PATH}"
     }
   }
