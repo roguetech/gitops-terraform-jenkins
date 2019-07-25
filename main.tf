@@ -13,7 +13,7 @@ provider "aws" {
 }
 
 # Create EC2 instance
-resource "aws_instance" "default" {
+resource "aws_instance" "example" {
   ami                    = "${var.ami}"
   #count                  = "${var.count}"
   key_name               = "${var.key_name}"
@@ -21,8 +21,8 @@ resource "aws_instance" "default" {
   source_dest_check      = false
   instance_type          = "${var.instance_type}"
 
-  tags 
-    Name = "terraform-default"
+  #tags 
+  #  Name = "terraform-default"
 }
 
 # Create Security Group for EC2
