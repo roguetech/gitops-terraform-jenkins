@@ -17,7 +17,7 @@ resource "aws_instance" "example" {
   ami                    = "${var.ami}"
   #count                  = "${var.count}"
   key_name               = "${var.key_name}"
-  vpc_security_group_ids = ["${aws_security_group.example123.id}"]
+  //vpc_security_group_ids = ["${aws_security_group.example123.id}"]
   source_dest_check      = false
   instance_type          = "${var.instance_type}"
   subnet_id = "subnet-6e619d09"
@@ -27,7 +27,7 @@ resource "aws_instance" "example" {
 }
 
 # Create Security Group for EC2
-resource "aws_security_group" "example123" {
+resource "aws_security_group" "example1234" {
   name = "terraform-default-sg"
 
   ingress {
