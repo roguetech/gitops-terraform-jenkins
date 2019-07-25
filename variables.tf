@@ -1,6 +1,6 @@
-variable "count" {
-  default = 1
-}
+#variable "count" {
+#  default = 1
+#}
 
 variable "key_name" {
   description = "Private key name to use with instance"
@@ -9,7 +9,7 @@ variable "key_name" {
 
 variable "instance_type" {
   description = "AWS instance type"
-  default     = "t3.small"
+  default     = "t3.micro"
 }
 
 variable "ami" {
