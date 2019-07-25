@@ -20,6 +20,7 @@ resource "aws_instance" "example" {
   vpc_security_group_ids = ["${aws_security_group.default.id}"]
   source_dest_check      = false
   instance_type          = "${var.instance_type}"
+  subnet_id = "subnet-6e619d09"
 
   #tags 
   #  Name = "terraform-default"
